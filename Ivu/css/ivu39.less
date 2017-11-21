@@ -1,0 +1,269 @@
+@import 'variables.less';
+/*CSS reset*/
+*{
+  /*padding:0!important;*/
+  box-sizing: border-box!important;
+}
+td{
+  box-sizing: border-box!important;
+}
+body{
+  font-size:62.5%;
+  /*position: relative;*/
+}
+body.bodyBackground{
+  /*background-image:none!important;*/
+  /*background-color: @white;*/
+  padding: 0 2em !important;
+}
+/*grid style rewrite by CX*/
+.ef-grid-content .ef-header TABLE.ef-grid-table > TBODY > TR > TD{
+  height:40px  !important; 
+  white-space: nowrap !important;
+  background-color: @titleGrey;
+  padding-top:2px;
+  color: #495060;
+}
+td{
+   -webkit-box-sizing: content-box!important;
+  -moz-box-sizing: content-box!important;
+  box-sizing: content-box!important;
+}
+.ef-grid-content .ef-header TABLE.ef-grid-table > TBODY > TR > TD>div:first-child{
+  height:3.2em !important;
+  /*line-height:3.2em !important;*/
+}
+.ef-grid-content [class^="ef-grid-"]> TBODY > TR > TD{
+  height: 4em !important;
+  text-align: center;
+  //padding-top: 4px !important;
+  border:none;
+  border-bottom:1px solid @borderGrey;
+  border-right: 1px solid @borderGrey;
+
+}
+
+/*.ef-grid-content.autoHeight .ef-grid-dataTable>TBODY>TR>TD>DIV:first-child{
+  height: inherit!important;
+}*/
+tr.ef-grid-tableHeader.ef-header {
+  
+  td{
+    /*padding-right: 1px !important;*/
+      border-top:1px solid @borderGrey;
+
+    border-bottom:1px solid darken(@borderGrey,20%);
+    /*border-right: 1px solid @borderGrey !important;*/
+    }
+}
+.ef-grid-content [class^="ef-grid-"] > TBODY > TR > TD>div{
+  line-height:1;
+  white-space:nowrap!important;
+}
+div[id$="__head_div"],div[id$="__corner_div"]{
+  height:3.2em !important;
+}
+table.ef-grid-functable[id^="ef_grid_"][id*="_func_table"]>tbody>tr>td{
+  height: 20px!important;
+}
+/*region style  2017.11.7*/
+
+/*div[id^="ef_region"].ef-region-content{
+  border-radius: .5em;
+  border-bottom-left-radius: 2em;
+  /*border: 1px dotted @borderGrey;*/
+/*  border: 1px solid lighten(@titleBlack,45%)!important;
+  border-bottom-width: 2px !important;
+  overflow-x: hidden!important;
+   background: @gridBg;
+*/
+div.ef-grid-func td{
+  border: none!important;
+}
+/*div[id^="ef_region"].ef-region-content:hover{
+  box-shadow: 0 2px 7px rgba(0,0,0,.15);
+}*/
+
+/*background 白色,内边距左右30px,上下暂不定*/
+/*div.whiteWall{
+  background: @white;
+  padding-left: 3em !important;
+  padding-right: 3em !important;
+  position: absolute;
+  left: 3em;
+  right: 3em;
+  top: 3em;
+  bottom: 3em;
+}*/
+div[id^="ef_grid_"].ef-grid-content{
+  /*padding: 1em 0!important;*/
+  border: none;
+  /*background: transparent;*/
+  height: auto!important;
+}
+#ef_div_inqu {
+  padding: 1em 0 !important;
+
+}
+/*region 标题设置*/
+/*div.ef-region-head{
+  border: none;
+  height: 3em;
+  border-bottom: 1px solid @borderGrey!important;
+  background: @white!important;
+  table.ef-container-header{
+    td:last-child{
+      line-height:3em;
+    }
+    div.ef-region-title{
+      font-size: 1.6em!important;
+      color: @titleBlack !important;
+      font-weight: normal !important;
+    }
+  }
+}*/
+/*region 脚部设置*/
+div.ef-region-footer{
+  height: 3em;
+  padding-right: 1em!important;
+  line-height: 3em;
+  margin-top: 0;
+}
+/*table 悬停时突出显示*/
+/*table[id^="ef_grid_"][id*="__grid_table"]:hover{
+box-shadow: 0 2px 7px rgba(0,0,0,.15);
+}*/
+
+/*form 标题*/
+/*.ef-form-head{ 
+  margin-bottom: 1em;
+  tr .ef-form-head-title {
+    color: #000;
+    font-size: 2.2em;
+    font-weight:400;
+  }
+}*/
+/*info 区域字体大小*/
+div#ef_div_inqu td[nowrap]{
+  font-size: 1.4em;
+}
+
+
+.ef-grid-func.ef-header{
+  background: @gridBg;
+  /*border: none;*/
+  /*margin-top: 2px;*/
+}
+
+.ef-grid-func > div td:last-child ul > li.ui-page{
+  height: 20px;
+  line-height: 20px;
+  font-weight: normal;
+  color: #222222;
+  font-size: 14px;
+}
+
+
+.ef-grid-table.ef-grid-dataTable tr > td {
+  position: relative;
+    > div{
+      height: 100%!important;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      line-height: 4em!important;
+      padding: 0;
+      textarea,select{
+        height: 100%!important;
+        position: relative;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        line-height: 3.2em!important;
+        padding: 0;
+     }
+     textarea{
+      padding-left: 1em;
+     }
+  }
+}
+
+li.ui-page span.ef-icon{
+  width: 18px;
+  height: 18px;
+  transition: all .15s linear;
+}
+
+
+.i-pager-info{
+  padding: 0;
+  margin-top: 1px;
+}
+span.ef-icon.ef-icon-left.i-state-disabled{
+  background-image: url("../pic/leftGrey.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+span.ef-icon.ef-icon-left{
+  background-image: url("../pic/leftBlue.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  border-radius: 50%;
+
+}
+.ui-state-hover{
+  background: transparent;
+}
+li.ui-page span.ef-icon:hover{
+  transform: scale(1.2,1.2);
+}
+span.ef-icon.ef-icon-right.i-state-disabled{
+  background-image: url("../pic/rightGrey.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+span.ef-icon.ef-icon-right{
+  background-image: url("../pic/rightBlue.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+span.ef-icon.ef-icon-firstpage.i-state-disabled{
+  background-image: url("../pic/firstGrey.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+span.ef-icon.ef-icon-firstpage{
+  background-image: url("../pic/firstBlue.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+span.ef-icon.ef-icon-lastpage.i-state-disabled{
+  background-image: url("../pic/lastGrey.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+span.ef-icon.ef-icon-lastpage{
+  background-image: url("../pic/lastBlue.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.ui-icon-arrowreturnthick-1-e{
+  display: none!important;
+}
+
+.ef-grid-content.autoHeight .ef-grid-header-column>SPAN{
+  white-space: nowrap!important;
+}
+
+
+
+
+
+
+
+
+
